@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Stranding
+namespace Stranding.Testing
 {
     public class Test_console_control : MonoBehaviour
     {

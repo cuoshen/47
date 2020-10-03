@@ -9,6 +9,7 @@ namespace Stranding
     /// </summary>
     abstract class BlockEvent
     {
+        public bool isComplete = false;
         public abstract void Execute(Player player);
     }
 }

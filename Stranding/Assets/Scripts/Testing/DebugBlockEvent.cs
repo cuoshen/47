@@ -9,6 +9,7 @@ namespace Stranding.Testing
         public override void Execute(Player player)
         {
             Debug.Log("Debug event triggered by player " + player.Name);
+            isComplete = true;
         }
     }
 }
