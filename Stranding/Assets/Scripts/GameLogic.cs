@@ -26,9 +26,18 @@ namespace Stranding
         private Data_storage storage;
 
         public int Turn { get; private set; } = 0;
+        public int TotalStep { get; private set; } = 0;
+        public int Loop { get; private set; } = 0;
         public bool ReadyForNextTurn = true;
         private float timeSinceLastTurn = 0f;
         private float cooldownTime = 0.5f;
+
+        private void UpdataStorage()
+        {
+            storage.Health = player.Health;
+            storage.Loop = Loop;
+            storage.Step = TotalStep;
+        }
 
         private void Start()
         {
@@ -38,6 +47,7 @@ namespace Stranding
             {
                 circle.Add(b);
             }
+            UpdataStorage();
         }
 
         private void Update()
@@ -51,15 +61,19 @@ namespace Stranding
             if (Input.GetKey(KeyCode.Space) && ReadyForNextTurn)
             {
                 TakeNextTurn();
+                UpdataStorage();
             }
         }
 
         private void TakeNextTurn()
         {
             ReadyForNextTurn = false;
-            int newMapPosition = player.MapPosition + Random.Range(0, player.MaxSpeed) + 1; // TODO: maybe implement a visual dice roll
+            int movement = Random.Range(0, player.MaxSpeed) + 1; // TODO: maybe implement a visual dice roll
+            TotalStep += player.MapPosition + movement;
+            int newMapPosition = movement;
             while (newMapPosition >= circle.Count)
             {
+                Loop++;
                 newMapPosition -= circle.Count;
             }
             player.MapPosition = newMapPosition;
