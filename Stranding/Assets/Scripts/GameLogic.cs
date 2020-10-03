@@ -11,7 +11,6 @@ namespace Stranding
         /// </summary>
         private const int desirableMapSize = 16;
 
-
         [SerializeField]
         private GameObject circleMasterDirectory;
         /// <summary>
@@ -23,6 +22,8 @@ namespace Stranding
 
         [SerializeField]
         private Player player;
+        [SerializeField]
+        private Data_storage storage;
 
         public int Turn { get; private set; } = 0;
         public bool ReadyForNextTurn = true;
