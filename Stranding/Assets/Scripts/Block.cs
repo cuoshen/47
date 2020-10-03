@@ -18,7 +18,8 @@ namespace Stranding
 
         private void Start()
         {
-            Event = new DebugBlockEvent();
+            //Event = new DebugBlockEvent();
+            Event = new NotificationEvent("This is a notification.");
         }
     }
 }

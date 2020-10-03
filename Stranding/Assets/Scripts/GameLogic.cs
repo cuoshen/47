@@ -29,6 +29,7 @@ namespace Stranding
         public int TotalStep { get; private set; } = 0;
         public int Loop { get; private set; } = 0;
         public bool ReadyForNextTurn = true;
+        private bool hasCooledDown = true;
         private float timeSinceLastTurn = 0f;
         private float cooldownTime = 0.5f;
 
@@ -56,8 +57,14 @@ namespace Stranding
             while (timeSinceLastTurn >= cooldownTime)
             {
                 timeSinceLastTurn -= cooldownTime;
+                hasCooledDown = true;
+            }
+
+            if (currentEvent != null && currentEvent.isComplete && hasCooledDown)
+            {
                 ReadyForNextTurn = true;
             }
+
             if (Input.GetKey(KeyCode.Space) && ReadyForNextTurn)
             {
                 TakeNextTurn();
@@ -68,9 +75,11 @@ namespace Stranding
         private void TakeNextTurn()
         {
             ReadyForNextTurn = false;
+            hasCooledDown = false;
+
             int movement = Random.Range(0, player.MaxSpeed) + 1; // TODO: maybe implement a visual dice roll
-            TotalStep += player.MapPosition + movement;
-            int newMapPosition = movement;
+            TotalStep += movement;
+            int newMapPosition = player.MapPosition + movement;
             while (newMapPosition >= circle.Count)
             {
                 Loop++;

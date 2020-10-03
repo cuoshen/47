@@ -239,6 +239,41 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2977980613049342115, guid: cc153611855a8c345beaf90798a504a5,
+        type: 3}
+      propertyPath: storage
+      value: 
+      objectReference: {fileID: 1989951551}
+    - target: {fileID: 2977980613049342115, guid: cc153611855a8c345beaf90798a504a5,
+        type: 3}
+      propertyPath: choicesTab
+      value: 
+      objectReference: {fileID: 1440448363}
+    - target: {fileID: 6579513684689173913, guid: cc153611855a8c345beaf90798a504a5,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579513684689173913, guid: cc153611855a8c345beaf90798a504a5,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1135757444}
+    - target: {fileID: 6579513684689173913, guid: cc153611855a8c345beaf90798a504a5,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClosingNotification
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579513684689173913, guid: cc153611855a8c345beaf90798a504a5,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579513684689173913, guid: cc153611855a8c345beaf90798a504a5,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8016591333306592950, guid: cc153611855a8c345beaf90798a504a5,
         type: 3}
       propertyPath: source
@@ -536,6 +571,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 20, y: -24.47, z: 0}
+--- !u!114 &1135757444 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2977980613049342115, guid: cc153611855a8c345beaf90798a504a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 477169764}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4379c46ea21b6fb48a9b8bddbfec0da4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1256883362
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,7 +628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   circleMasterDirectory: {fileID: 1831352750}
   player: {fileID: 2044806900}
-  storage: {fileID: 0}
+  storage: {fileID: 1989951551}
   ReadyForNextTurn: 1
 --- !u!1 &1402455071
 GameObject:
@@ -689,6 +736,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1402455071}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1440448363 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1650085119455206914, guid: cc153611855a8c345beaf90798a504a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 477169764}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1453279589
 GameObject:
   m_ObjectHideFlags: 0

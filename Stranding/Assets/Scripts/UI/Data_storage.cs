@@ -62,13 +62,12 @@ namespace Stranding
             }
         }
 
-        public Data_storage()
+        public void Start()
         {
             Health = 100;
             Loop = 0;
             Step = 0;
         }
-
     }
 }
 
