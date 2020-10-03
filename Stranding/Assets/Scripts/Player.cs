@@ -6,11 +6,10 @@ namespace Stranding
 {
     class Player : MonoBehaviour
     {
-        public int MaxSpeed { get; set; } = 6;
-
+        public int MaxSpeed { get; set; } = 1;
         public int MapPosition { get; set; } = 0;
 
-
+        public readonly string Name = "Meme man";
     }
 }
 

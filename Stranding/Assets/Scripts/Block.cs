@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Stranding.Testing; // Delete upon finish
 
 namespace Stranding
 {
@@ -13,6 +14,11 @@ namespace Stranding
         {
             get;
             private set;
+        }
+
+        private void Start()
+        {
+            Event = new DebugBlockEvent();
         }
     }
 }
