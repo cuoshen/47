@@ -69,8 +69,8 @@ namespace Stranding
         {
             ReadyForNextTurn = false;
             int movement = Random.Range(0, player.MaxSpeed) + 1; // TODO: maybe implement a visual dice roll
-            TotalStep += player.MapPosition + movement;
-            int newMapPosition = movement;
+            TotalStep += movement;
+            int newMapPosition = player.MapPosition + movement;
             while (newMapPosition >= circle.Count)
             {
                 Loop++;

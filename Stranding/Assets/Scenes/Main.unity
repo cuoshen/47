@@ -581,7 +581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   circleMasterDirectory: {fileID: 1831352750}
   player: {fileID: 2044806900}
-  storage: {fileID: 0}
+  storage: {fileID: 1989951551}
   ReadyForNextTurn: 1
 --- !u!1 &1402455071
 GameObject:
