@@ -30,7 +30,7 @@ public class Progress_info_control : MonoBehaviour
     void Update()
     {
         // pull data from data storage
-        loop = data_storage.Get_loop();
-        step = data_storage.Get_step();
+        loop = data_storage.Health;
+        step = data_storage.Step;
     }
 }

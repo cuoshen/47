@@ -7,56 +7,62 @@ public class Data_storage : MonoBehaviour
     ///<summary>
     /// used to store user data
     /// </summary>
+    private int _health;
+    public int Health
+    {
+        set
+        {
+            if (value >= 0 && value <= 100)
+            {
+                _health = value;
+            }
+        }
 
-    private int health;
-    private int loop;
-    private int step;
+        get
+        {
+            return _health;
+        }
+    }
+
+    private int _loop;
+    public int Loop
+    {
+        set
+        {
+            if (value >= 0)
+            {
+                _loop = value;
+            }
+        }
+
+        get
+        {
+            return _loop;
+        }
+    }
+
+    private int _step;
+    public int Step
+    {
+        set
+        {
+            if (value >= 0)
+            {
+                _step = value;
+            }
+        }
+
+        get
+        {
+            return _step;
+        }
+    }
 
     public Data_storage()
     {
-        health = 100;
-        loop = 0;
-        step = 0;
+        Health = 100;
+        Loop = 0;
+        Step = 0;
     }
-
-    // getters
-    public int Get_health()
-    {
-        return this.health;
-    }
-
-    public int Get_loop()
-    {
-        return this.loop;
-    }
-
-    public int Get_step()
-    {
-        return this.step;
-    }
-
-    // settters
-    public void Set_health(int _health)
-    {
-        if (_health >= 0 && _health <= 100)
-        {
-            this.health = _health;
-        }
-    }
-
-    public void Set_loop(int _loop)
-    {
-        if (_loop >= 0)
-        {
-            this.loop = _loop;
-        }
-    }
-
-    public void Set_step(int _step)
-    {
-        if (_step >= 0)
-        {
-            this.step = _step;
-        }
-    }
+    
 }

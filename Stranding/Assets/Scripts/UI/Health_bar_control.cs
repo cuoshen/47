@@ -28,7 +28,7 @@ public class Health_bar_control : MonoBehaviour
     void Update()
     {
         // pull data from data storage
-        health = data_storage.Get_health();
+        health = data_storage.Health;
 
         // update health bar image
         health_image.GetComponent<RectTransform>().sizeDelta = new Vector2(health, 20);

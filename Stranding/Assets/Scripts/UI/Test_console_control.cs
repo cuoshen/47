@@ -55,6 +55,6 @@ public class Test_console_control : MonoBehaviour
 
         // 3)
         // put data to data storage
-        data_storage.Set_health(health);
+        data_storage.Health = health;
     }
 }
