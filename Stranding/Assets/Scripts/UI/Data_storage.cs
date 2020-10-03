@@ -2,67 +2,71 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Data_storage : MonoBehaviour
+namespace Stranding
 {
-    ///<summary>
-    /// used to store user data
-    /// </summary>
-    private int _health;
-    public int Health
+    public class Data_storage : MonoBehaviour
     {
-        set
+        ///<summary>
+        /// used to store user data
+        /// </summary>
+        private int _health;
+        public int Health
         {
-            if (value >= 0 && value <= 100)
+            set
             {
-                _health = value;
+                if (value >= 0 && value <= 100)
+                {
+                    _health = value;
+                }
+            }
+
+            get
+            {
+                return _health;
             }
         }
 
-        get
+        private int _loop;
+        public int Loop
         {
-            return _health;
-        }
-    }
-
-    private int _loop;
-    public int Loop
-    {
-        set
-        {
-            if (value >= 0)
+            set
             {
-                _loop = value;
+                if (value >= 0)
+                {
+                    _loop = value;
+                }
+            }
+
+            get
+            {
+                return _loop;
             }
         }
 
-        get
+        private int _step;
+        public int Step
         {
-            return _loop;
-        }
-    }
-
-    private int _step;
-    public int Step
-    {
-        set
-        {
-            if (value >= 0)
+            set
             {
-                _step = value;
+                if (value >= 0)
+                {
+                    _step = value;
+                }
+            }
+
+            get
+            {
+                return _step;
             }
         }
 
-        get
+        public Data_storage()
         {
-            return _step;
+            Health = 100;
+            Loop = 0;
+            Step = 0;
         }
-    }
 
-    public Data_storage()
-    {
-        Health = 100;
-        Loop = 0;
-        Step = 0;
     }
-    
 }
+
