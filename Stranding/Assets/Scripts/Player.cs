@@ -12,4 +12,3 @@ namespace Stranding
         public readonly string Name = "Meme man";
     }
 }
-
