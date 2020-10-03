@@ -33,7 +33,7 @@ namespace Stranding
                 }
                 else if (value is ChoiceEvent)
                 {
-
+                    // TODO: handle choice event
                 }
                 else
                 {
