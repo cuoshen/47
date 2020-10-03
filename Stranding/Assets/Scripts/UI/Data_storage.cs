@@ -4,11 +4,13 @@ using UnityEngine;
 
 namespace Stranding
 {
+    ///<summary>
+    /// used to store user data
+    /// </summary>
+    
     public class Data_storage : MonoBehaviour
     {
-        ///<summary>
-        /// used to store user data
-        /// </summary>
+        
         private int _health;
         public int Health
         {

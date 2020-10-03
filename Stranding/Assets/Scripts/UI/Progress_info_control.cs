@@ -1,15 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Stranding
 {
+    /// <summary>
+    /// used to control progress info ui
+    /// </summary>
+    
     public class Progress_info_control : MonoBehaviour
     {
-        /// <summary>
-        /// used to control progress info ui
-        /// </summary>
-
         // player data storage game object
         public GameObject source;
         // local data storage script object
@@ -34,6 +35,9 @@ namespace Stranding
             // pull data from data storage
             loop = data_storage.Health;
             step = data_storage.Step;
+
+            LOOP_count.GetComponent<Text>().text = loop.ToString();
+            STEP_count.GetComponent<Text>().text = step.ToString();
         }
     }
 }

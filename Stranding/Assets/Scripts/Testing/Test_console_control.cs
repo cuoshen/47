@@ -4,11 +4,12 @@ using UnityEngine;
 
 namespace Stranding.Testing
 {
+    /// <summary>
+    /// example data storage use case
+    /// </summary>
+    
     public class Test_console_control : MonoBehaviour
     {
-        /// <summary>
-        /// example data storage use case
-        /// </summary>
 
         /// 1)
         // player data storage game object

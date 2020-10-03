@@ -4,11 +4,12 @@ using UnityEngine;
 
 namespace Stranding
 {
+    /// <summary>
+    /// used to control progress info ui
+    /// </summary>
+    
     public class Health_bar_control : MonoBehaviour
     {
-        /// <summary>
-        /// used to control progress info ui
-        /// </summary>
 
         // player data storage game object
         public GameObject source;
