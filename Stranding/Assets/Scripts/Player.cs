@@ -28,6 +28,6 @@ namespace Stranding
             }
         }
 
-        public readonly string Name = "Meme man";
+        public readonly string Name = "Nella";
     }
 }
