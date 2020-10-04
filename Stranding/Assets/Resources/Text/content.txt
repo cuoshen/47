@@ -1,0 +1,24 @@
+// Comments start with "//"
+// Comments will not be picked up by the parser, so you may add as much as you want
+
+// It is recommended to keep track of the loop when you write this file, with a line of comment
+// In this demo, the size of the loop is 6, set the actual size to something bigger like 36 in the actual game I guess
+// Loop: 1
+
+// A valid statement must start with a tag, showing which event it is
+// We only have 3 event types now, [Notif], [Choice] and [Null]
+// The payload follows the type tag directly
+
+[Notif]This is a notification, it is the beginning of the 1st loop
+[Notif]A second notification, there will be no event at next block
+[Null]
+// Whenever we have a choice, specify two outcomes
+[Choice]Make a choice here [Option1]You choose option 1, here is the notification [Option2]You choose the other option
+[Null]
+[Notif]Last event in the loop
+
+// After we reach the end of the 1st loop, it just wraps back
+// Loop: 2
+
+[Notif]First event in the second loop
+[Notif]Continue on
