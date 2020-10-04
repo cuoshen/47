@@ -312,6 +312,11 @@ PrefabInstance:
       propertyPath: choiceButtonTexts.Array.data[1]
       value: 
       objectReference: {fileID: 301645850}
+    - target: {fileID: 3805562226168209138, guid: cc153611855a8c345beaf90798a504a5,
+        type: 3}
+      propertyPath: source
+      value: 
+      objectReference: {fileID: 1989951550}
     - target: {fileID: 4000583950636075793, guid: cc153611855a8c345beaf90798a504a5,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

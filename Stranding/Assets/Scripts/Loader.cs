@@ -21,6 +21,14 @@ namespace Stranding
             // Parse out each line
             List<string> lines = new List<string>(contentFile.text.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries));
             // Remove comment lines
+            for (int i = 0; i < lines.Count; i++)
+            {
+                string line = lines[i];
+                for (int j = 0; j < line.Length; j++)
+                {
+
+                }
+            }
         }
     }
 }
