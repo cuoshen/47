@@ -33,7 +33,7 @@ namespace Stranding
         void Update()
         {
             // pull data from data storage
-            loop = data_storage.Health;
+            loop = data_storage.Loop;
             step = data_storage.Step;
 
             LOOP_count.GetComponent<Text>().text = loop.ToString();

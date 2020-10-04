@@ -6,18 +6,13 @@ namespace Stranding
 {
     class GameLogic : MonoBehaviour
     {
-        /// <summary>
-        /// Predefine a desirable size for better performance
-        /// </summary>
-        private const int desirableMapSize = 16;
-
         [SerializeField]
         private GameObject circleMasterDirectory;
         /// <summary>
         /// We have a circular map represented by a list of blocks,
         /// where the last in the list loops back to the first.
         /// </summary>
-        private List<Block> circle = new List<Block>(desirableMapSize);
+        private List<Block> circle = new List<Block>(Capacity.BLOCKS);
         private BlockEvent currentEvent;
 
         [SerializeField]

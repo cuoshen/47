@@ -16,6 +16,8 @@ namespace Stranding
         private Text notificationText;
         [SerializeField]
         private GameObject choicesTab;
+        [SerializeField]
+        private List<Text> choiceButtonTexts;
 
         private BlockEvent _currentEvent;
         public BlockEvent CurrentEvent
@@ -33,7 +35,11 @@ namespace Stranding
                 }
                 else if (value is ChoiceEvent)
                 {
-
+                    _currentEvent = value;
+                    choicesTab.SetActive(true);
+                    StartSendingNotification((value as ChoiceEvent).prompt);
+                    // Update the option text accordingly
+                    UpdateOptionText((value as ChoiceEvent));
                 }
                 else
                 {
@@ -72,7 +78,15 @@ namespace Stranding
             }
         }
 
-        public void StartSendingNotification(string message)
+        private void UpdateOptionText(ChoiceEvent choiceEvent)
+        {
+            for (int i = 0; i < choiceEvent.outcomes.Count; i ++)
+            {
+                choiceButtonTexts[i].text = choiceEvent.outcomes[i].optionText;
+            }
+        }
+
+        private void StartSendingNotification(string message)
         {
             if (message == "")
             {
@@ -90,6 +104,7 @@ namespace Stranding
         public void OnClosingNotification()
         {
             notification.SetActive(false);
+            choicesTab.SetActive(false);
             if (CurrentEvent != null)
             {
                 if (CurrentEvent is NotificationEvent)
@@ -99,9 +114,15 @@ namespace Stranding
             }
         }
 
-        public void OnChoosingOption()
+        public void OnChoosingOption(int choice)
         {
-
+            // We have made a choice so close the window and be ready for execution of outcome
+            notification.SetActive(false);
+            choicesTab.SetActive(false);
+            if (CurrentEvent is ChoiceEvent)
+            {
+                (CurrentEvent as ChoiceEvent).Choice = choice;
+            }
         }
     }
 }
