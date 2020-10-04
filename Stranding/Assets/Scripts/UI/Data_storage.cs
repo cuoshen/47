@@ -62,11 +62,29 @@ namespace Stranding
             }
         }
 
+        private int _last_dice_outcome;
+        public int Last_dice_outcome
+        {
+            set
+            {
+                if (value >= 0 && value <= 100)
+                {
+                    _last_dice_outcome = value;
+                }
+            }
+
+            get
+            {
+                return _last_dice_outcome;
+            }
+        }
+
         public void Start()
         {
             Health = 100;
             Loop = 0;
             Step = 0;
+            Last_dice_outcome = 0;
         }
     }
 }
