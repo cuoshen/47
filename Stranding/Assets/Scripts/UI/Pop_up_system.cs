@@ -33,7 +33,9 @@ namespace Stranding
                 }
                 else if (value is ChoiceEvent)
                 {
-                    // TODO: handle choice event
+                    _currentEvent = value;
+                    choicesTab.SetActive(true);
+                    StartSendingNotification((value as ChoiceEvent).prompt);
                 }
                 else
                 {
@@ -99,9 +101,14 @@ namespace Stranding
             }
         }
 
-        public void OnChoosingOption()
+        public void OnChoosingOption(int choice)
         {
-
+            // We have made a choice so close the window and be ready for execution of outcome
+            choicesTab.SetActive(false);
+            if (CurrentEvent is ChoiceEvent)
+            {
+                (CurrentEvent as ChoiceEvent).Choice = choice;
+            }
         }
     }
 }
