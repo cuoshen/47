@@ -7,7 +7,6 @@ namespace Stranding.Testing
     /// <summary>
     /// example data storage use case
     /// </summary>
-    
     public class Test_console_control : MonoBehaviour
     {
 

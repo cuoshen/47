@@ -7,7 +7,6 @@ namespace Stranding
     /// <summary>
     /// roll a dice
     /// </summary>
-
     public class DiceRoll : MonoBehaviour
     {
         // player data storage game object
