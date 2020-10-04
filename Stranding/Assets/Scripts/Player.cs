@@ -28,6 +28,17 @@ namespace Stranding
             }
         }
 
+        [SerializeField]
+        private float speed = 5.0f;
+
+        public Vector3 destination;
+
+        private void Update()
+        {
+            // Move towards the destination
+            
+        }
+
         public readonly string Name = "Nella";
     }
 }
