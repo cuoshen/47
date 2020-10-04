@@ -59,6 +59,10 @@ namespace Stranding
             {
                 ReadyForNextTurn = true;
             }
+            else if (currentEvent == null && hasCooledDown)
+            {
+                ReadyForNextTurn = true;
+            }
 
             if (Input.GetKey(KeyCode.Space) && ReadyForNextTurn)
             {
@@ -85,8 +89,14 @@ namespace Stranding
             player.transform.position = circle[newMapPosition].transform.position + Vector3.up; // TODO: Smooth animation to move player to block
 
             // Execute event on the block
-            currentEvent = circle[newMapPosition].Event;
-            currentEvent.Execute(player);
+            if (circle[newMapPosition].Events.Count > 0)
+            {
+                currentEvent = circle[newMapPosition].Events.Dequeue();
+                if (currentEvent != null)
+                {
+                    currentEvent.Execute(player);
+                }
+            }
 
             Turn++;
         }

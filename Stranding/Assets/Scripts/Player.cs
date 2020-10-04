@@ -7,7 +7,7 @@ namespace Stranding
     class Player : MonoBehaviour
     {
         public int MaxSpeed { get; set; } = 1;
-        public int MapPosition { get; set; } = 0;
+        public int MapPosition { get; set; } = -1; // Start at -1 so that we land on the correct block
         private int _health;
         public int Health
         {
