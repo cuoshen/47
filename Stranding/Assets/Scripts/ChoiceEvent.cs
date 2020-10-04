@@ -10,10 +10,10 @@ namespace Stranding
         public EventOption(string text, NotificationEvent outcome)
         {
             optionText = text;
-            this.outcome = outcome;
+            this.eventOutcome = outcome;
         }
         public string optionText;
-        public NotificationEvent outcome;
+        public NotificationEvent eventOutcome;
     }
 
     class ChoiceEvent : BlockEvent
@@ -21,7 +21,7 @@ namespace Stranding
         private Player player;
         public readonly string prompt;
         private int optionsCount;
-        public readonly List<NotificationEvent> outcomes;
+        public readonly List<EventOption> outcomes;
         private int _choice = -1;
         public int Choice
         {
@@ -34,12 +34,13 @@ namespace Stranding
                 if (value >= 0 && value < optionsCount)
                 {
                     _choice = value;
-                    outcomes[_choice].Execute(player);
+                    outcomes[_choice].eventOutcome.Execute(player);
                 }
+                isComplete = true;
             }
         }
 
-        public ChoiceEvent(string prompt, List<NotificationEvent> outcomes)
+        public ChoiceEvent(string prompt, List<EventOption> outcomes)
         {
             this.prompt = prompt;
             this.outcomes = outcomes;
