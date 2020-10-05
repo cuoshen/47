@@ -58,6 +58,9 @@ namespace Stranding
                         case "Null":
                             currentEvent = null;
                             break;
+                        case "MultiNotif":
+                            currentEvent = ParseMultiNotificationEvent(line);
+                            break;
                         default:
                             Debug.LogError("Error paring out input text file : invalid tag");
                             break;
@@ -123,6 +126,13 @@ namespace Stranding
             }
 
             return new ChoiceEvent(prompt, payload);
+        }
+
+        private MultiNotificationEvent ParseMultiNotificationEvent(string line)
+        {
+            string messages = line.Substring(line.IndexOf(']') + 1);
+            string[] messagesSplit = messages.Split('^');
+            return new MultiNotificationEvent(new List<string>(messagesSplit));
         }
     }
 }

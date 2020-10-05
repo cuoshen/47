@@ -27,6 +27,8 @@ namespace Stranding
         private Sprite nellaHappy;
         [SerializeField]
         private SpriteRenderer characterArt;
+        [SerializeField]
+        private GameObject vnBackground;
 
         public Queue<string> Lines;
         private bool isAtTitleScreen;
@@ -36,6 +38,7 @@ namespace Stranding
         {
             titleScreen.SetActive(true);
             vnSuite.SetActive(false);
+            vnBackground.SetActive(false);
             isAtTitleScreen = true;
 
             // Parse out contents
@@ -96,6 +99,7 @@ namespace Stranding
             {
                 titleScreen.SetActive(false);
                 vnSuite.SetActive(true);
+                vnBackground.SetActive(true);
                 isAtTitleScreen = false;
             }
 

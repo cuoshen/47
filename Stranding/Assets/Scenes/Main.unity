@@ -5722,6 +5722,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+
 --- !u!4 &576932023 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4639619267287761472, guid: 46e8935e68345f7428f47d23cb78303f,
@@ -5877,6 +5878,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5726924514032026960, guid: baea1b8d1aee29b4db71b4aaa604a655,
     type: 3}
   m_PrefabInstance: {fileID: 677145442}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &690453218 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8470945554829261347, guid: ff29d01e5ac7b5a469944e5f4334e826,
+    type: 3}
+  m_PrefabInstance: {fileID: 1893180814}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:

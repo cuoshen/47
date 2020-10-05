@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.UI;
 
 namespace Stranding
@@ -18,6 +19,8 @@ namespace Stranding
         private GameObject choicesTab;
         [SerializeField]
         private List<Text> choiceButtonTexts;
+
+        private int currentNotificationIndex = 0;
 
         private BlockEvent _currentEvent;
         public BlockEvent CurrentEvent
@@ -41,6 +44,12 @@ namespace Stranding
                     // Update the option text accordingly
                     UpdateOptionText((value as ChoiceEvent));
                 }
+                else if (value is MultiNotificationEvent)
+                {
+                    _currentEvent = value;
+                    currentNotificationIndex = 0;
+                    StartSendingNotification((value as MultiNotificationEvent).messages[currentNotificationIndex]);
+                }
                 else
                 {
                     // Assignment failed
@@ -52,7 +61,7 @@ namespace Stranding
         private string message;
         private bool isSendingText = false;
         private int currentTextCounter = 0;
-        private float textSendingSpeed = 20f;
+        private float textSendingSpeed = 50f;
         private float currentTextPosition = 0;
 
         private void Start()
@@ -110,6 +119,18 @@ namespace Stranding
                 if (CurrentEvent is NotificationEvent)
                 {
                     CurrentEvent.isComplete = true;
+                }
+                else if (CurrentEvent is MultiNotificationEvent)
+                {
+                    if (currentNotificationIndex >= (CurrentEvent as MultiNotificationEvent).messages.Count - 1)
+                    {
+                        CurrentEvent.isComplete = true;
+                    }
+                    else
+                    {
+                        currentNotificationIndex++;
+                        StartSendingNotification((CurrentEvent as MultiNotificationEvent).messages[currentNotificationIndex]);
+                    }
                 }
             }
         }
