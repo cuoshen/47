@@ -55,13 +55,16 @@ namespace Stranding
                 hasCooledDown = true;
             }
 
-            if (currentEvent != null && currentEvent.isComplete && hasCooledDown)
+            if (player.isAtDestination)
             {
-                ReadyForNextTurn = true;
-            }
-            else if (currentEvent == null && hasCooledDown)
-            {
-                ReadyForNextTurn = true;
+                if (currentEvent != null && currentEvent.isComplete && hasCooledDown)
+                {
+                    ReadyForNextTurn = true;
+                }
+                else if (currentEvent == null && hasCooledDown)
+                {
+                    ReadyForNextTurn = true;
+                }
             }
 
             if (Input.GetKey(KeyCode.Space) && ReadyForNextTurn)
@@ -86,7 +89,7 @@ namespace Stranding
             }
             player.MapPosition = newMapPosition;
 
-            player.transform.position = circle[newMapPosition].transform.position + Vector3.up; // TODO: Smooth animation to move player to block
+            player.Destination = circle[newMapPosition].transform.position + Vector3.up; 
 
             // Execute event on the block
             if (circle[newMapPosition].Events.Count > 0)

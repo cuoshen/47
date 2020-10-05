@@ -29,14 +29,37 @@ namespace Stranding
         }
 
         [SerializeField]
-        private float speed = 5.0f;
+        private float speed = 10.0f;
+        [SerializeField]
+        private float displacementError = 0.1f;
 
-        public Vector3 destination;
+        private Vector3 _destination = Vector3.zero;
+        public Vector3 Destination
+        {
+            get
+            {
+                return _destination;
+            }
+            set
+            {
+                isAtDestination = false;
+                _destination = value;
+            }
+        }
+        public bool isAtDestination { get; private set; } = true;
 
         private void Update()
         {
             // Move towards the destination
-            
+            if (Vector3.Distance(transform.position, Destination) <= displacementError)
+            {
+                isAtDestination = true;
+            }
+            else
+            {
+                transform.position = Vector3.MoveTowards(transform.position, Destination, speed * Time.deltaTime);
+                transform.rotation = Quaternion.LookRotation(Destination - transform.position, Vector3.up);
+            }
         }
 
         public readonly string Name = "Nella";
