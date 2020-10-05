@@ -1,3 +1,25 @@
-first line
-second line
-third line
+Nella opened her eyes. 
+The feeling of oxygen depletion in his body stroke her. She choked and breathed heavily. The sweet taste of air calmed her down.
+[Nella, Surprised]Am I... On a train?
+Nella looked out of the window. The sky was as black as an obsidian ore, but some stars shined and pierced through the darkness to show their existence. 
+It didn’t take a long time for Nella to realise that the train was travelling in space.
+She was surprised to find that she was not scared by the situation.
+Instead, she felt relieved.
+[Nella, Calm]Maybe we will be recognised as a star by the people living on the planets.
+[Stephen]What kind of stars have a soft and comfortable blue velvet seat?
+Nella turned around. There was an old man with a pair of black glasses. 
+[Stephen]My name is Stephen. Would you mind if I seat beside you?
+[Nella, Surprised]No, not at all!
+Nella had a feeling that she knew this old man.
+[Nella, Calm]My name is Nella, and I’m a…
+Nella suddenly froze. She realised that she couldn’t recall anything except her name. 
+[Stephen]It’s possible for that to happen, especially in this train. I'm Stephen, last name is Hawking.
+[Nella, Surprised]Aren't you supposed to be dead right now.
+[Stephen]That is probably the case, yes.
+[Nella, Surprise]Does that mean...
+[Stephen]That is probably the case, Nella. I lived a happy life. I did research about things I love, and that is what makes me complete. I’m glad that I spent my last trip with you, Nella. Now, it’s time for me to live another life.
+Stephen replied with a smile.
+They gazed into the galaxy.
+[Stephen]It's beautiful, isn't it?
+They arrived at Southern Cross, Stephen stood up, steped outside, and disappeared in dazzling light.
+The train moved again.

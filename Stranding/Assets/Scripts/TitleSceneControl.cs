@@ -46,7 +46,16 @@ namespace Stranding
             {
                 if (Lines.Count > 0)
                 {
-                    textBox.text = Lines.Dequeue();
+                    string line = Lines.Dequeue();
+                    textBox.text = line;
+                    // Update character art accordingly
+                    if (line.Contains("]"))
+                    {
+                        string tag = line.Substring(1, line.IndexOf(']') - 1);
+                        switch (tag)
+                        {
+                        }
+                    }
                 }
                 else
                 {
