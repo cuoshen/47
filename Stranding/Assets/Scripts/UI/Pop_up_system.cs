@@ -122,7 +122,7 @@ namespace Stranding
                 }
                 else if (CurrentEvent is MultiNotificationEvent)
                 {
-                    if (currentNotificationIndex >= 1)
+                    if (currentNotificationIndex >= (CurrentEvent as MultiNotificationEvent).messages.Count - 1)
                     {
                         CurrentEvent.isComplete = true;
                     }

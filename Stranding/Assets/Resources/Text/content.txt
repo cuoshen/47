@@ -1,14 +1,14 @@
 // Loop 1
 // 1
-//[Null]
+[Null]
 // 2
-//[Null]
+[Null]
 // 3
-//[Null]
+[Null]
 // 4
-//[Null]
+[Null]
 // 5
-//[Null]
+[Null]
 // 6 Northern Cross Loop 1
 [MultiNotif]The crunching sound suddenly ends. It was the Northern Cross Station. Looked out of the window, a sense of familiarity struck Nella, and she decided to have a walk around the station. She got out of the train and shivered -- apparently, it was much warmer on the train. There was an empty ticket office beside the exit of the platform. Only a dimming purple light was shinning in the dark. Outside the station, it was a wide river -- almost impossible to see the other side. The water of the river was reflecting the lights from the Northern Cross. The lights cannot travel far, Nella thought. She had a feeling that she was the only person that was enjoying the astonishing view right now. ^There were crystals covering the most part of the riverbank. Nella picked one up. A small fire ball was burning inside it, which then flickered, and went out. Nella sat down and started to play with the crystals. Suddenly, her head started to ache, and she heard a girl’s voice. ‘Nella! Let’s go to the riverbank and play with those sands!’ The voice was like a singing oriole. A blurred figure of a blonde girl appeared beside him. Nella was sure that all these things were just part of her memory, but it was so real. The whistle of the train pulled her back to reality. Still trapped in her own thoughts, Nella stumbled for a several times during her trip back to the train.
 // 7
