@@ -1,1 +1,103 @@
-[Notif]Example
+// [Notif]This is a notification
+// [Null]
+// [Choice]Please make a choice [a choice]You made a choice[another choice]
+// 6 12 18 24 Stations
+// Nothern Cross --> Aquila --> Scorpio --> Southern Cross
+// loop1
+// 1
+[Null]
+// 2
+[Null]
+// 3
+[Null]
+// 4
+[Null]
+// 5
+[Null]
+// 6
+[Notif]The crunching sound suddenly came to an end. Nella looked out of the window. It was the Northern Cross Station. Outside the window, a big clock was hanging above the church-like station, and the surface of the clock, which Nella was unsure about what the material was, was as clear as the water. A sense of familiarity and warmth struck Nella, and she decided to have a walk around the station. She got out of the train, and the difference in temperature made her shivered. Apparently, it was much warmer on the train. There was a ticket office located beside the exit of the platform. There were no one in the office. Only a dimming purple light was shinning in the dark. Nella had an uncomfortable feeling that someone might be watching her from the purple light, so she rushed past the ticket office. Outside the station, it was a wide river. The river was so wide that it was almost impossible to see the other side of the river. The water of the river was reflecting the lights from the northern cross, and pale reflections shined through the space. The pale reflected lights can’t travel far, Nella thought. She had a feeling that she was the only person that was enjoying the astonishing view right now. There were crystals covering the most part of the riverbank. Nella picked one up. A small fire ball was burning inside the crystal. The fire ball flickered and went out. Nella sat down and started to play with the crystals. Suddenly, her head started to ache, and she heard a girls’ voice. ‘Nella! Let’s go to the riverbank and play with those sands!’ The voice was cheerful and high-pitched, just liked an oriole was singing. A blurred figure of a blonde girl appeared beside him. Nella was pretty sure that all these things were just part of her memory, but it was so real. The steam whistle of the train pulled her back to reality. Still trapped in his own thoughts, Nella stood up and stumbled for a several times during her trip back to the train.
+// 7
+[Null]
+// 8
+[Null]
+// 9
+[Null]
+// 10
+[Null]
+// 11
+[Null]
+// 12
+[Notif]The train stopped at Aquila Station. A man with an old-fashioned panama hat went on the train. He had a black backpack behind him, and he started to scan through the coach. Then, he seemed to make up his mind. He walked towards Nella and asked: ‘May I sit beside you, lady?’ Nella was thinking about other things. She nodded and went back to think about other things again. The man with the hat, however, ignored the fact that Nella was thinking about other things. He faced towards Nella and tried to start a conversation. ‘My name is Jonah, and I’m a bird hunter.’ ‘A bird hunter?’ The line attracted Nella’s attention. Jonah, who was content that Nella was interested, said: ‘Yes! I catch these birds and made them into desserts. In fact, I can give you a box of bird as a gift.’ Jonah started searching in the backpack, and pulled out an exquisite candy box. Nella thanked Jonah, and opened the box. There was a crystal bird inside. Nella pulled down one of its legs and put it into the mouth. It tasted like chocolate. The satisfying sweetness diffused throughout Nella’s mouth. ‘It’s pretty good.’ Nella smiled at Jonah, and Jonah replied with a belly laugh. Inside the box, there was a picture showing three enormous trunks of cosmic dust and gases. Nella pointed at the picture, ‘Ah, I know this picture. <The pillars of creation>, taken by the Hubble space telescope.’ ‘100 points! I put this one in the box because it’s my favourite space picture.’ ‘So am I. I just can’t express enough about how I love the Hubble space telescope.’ Silence for a short time. Jonah suddenly stood up. ‘I need to go and chase after some birds right now. We might meet in the future if you stay on this train.’ ‘I might, good luck.’ Jonah lowered his hat to show his respect, and walked slowly towards the door.
+// 13
+[Null]
+// 14
+[Null]
+// 15
+[Null]
+// 16
+[Null]
+// 17
+[Null]
+// 18
+[Notif]Outside the window, stars gathered together and formed a scorpion. It was so bright that the space seemed like the daylight time on the Earth at this place. The train had just arrived at the Scorpio Station. ‘Do you know why they are burning the sky?’ The gentleman sitting in the front seat of Nella suddenly turned around and ask. Nella shook her head. ‘It’s not just about the stars actually. It’s also about how you understand life and death.’ Nella was confused about the gentleman’s words. ‘Ah… I’m sorry. I just want to tell you a story. It will make more sense after you hear it.’ Then, the gentleman reached his pocket watch and checked the time. ‘Maybe not today. If you kept travelling around the railroad, you will meet me again at this station. I’ll tell you the story. See you then!’ The gentleman rushed to the door and got off the train. ‘Weird man.’ Nella said to herself.
+// 19
+[Null]
+// 20
+[Null]
+// 21
+[Null]
+// 22
+[Null]
+// 23
+[Null]
+// 24
+[Notif]Some passengers on the train started to worship, and the train was silence. A woman took out her silver cross and held it in the hand. A boy lowered his head and started to move his lips. Nella had a feeling that even if she just dropped a tiny needle on the floor, every one will hear it and start to look at her with anger. It was the Southern Cross station. Many passengers got off the train here and went to heaven. The main building reminded Nella more of a church rather than a normal train station. Nella just sat straight on the seat and looked out of the window. She didn’t want to worship nor want to get off, and the scenery outside was beautiful as usual.
+// loop2
+// 1
+[Null]
+// 2
+[Null]
+// 3
+[Null]
+// 4
+[Null]
+// 5
+[Null]
+// 6
+[Notif]It was the northern cross station again. Nella rushed down the train and walked directly towards the riverbank. The blurred figure of the blonde girl appeared again, so did her voice. ‘Look at the stars!’ ‘It’s beautiful, isn’t it? Do you see that cross in the sky? That is the northern cross.’ A girl’s voice appeared. It was Nella’s voice, just seemed much younger. The girl giggled, ‘You really like stars.’ ‘Yes! Last week, my father showed me a photo by the name <the pillars of creation>. He said that it was taken by some huge thingy in the sky by the name Hubble.’ ‘Hubble? Sounds like my uncle’s name.’ ‘Yes, the thingy they built was powerful enough to take photos of stars and cosmic dusts! I wish that I can watch those stars from a closer distance one day. The scenery will be breath-taking!’ ’Maybe you can become an astronaut in the future!’ The figure of the blonde girl suddenly became clear, and the girl looked directly at Nella through her blue eyes. ‘Yes! Yes!’ Nella stood up and stroke her head with both of her hands. ‘Why did I forget about it? I was an astronaut, and that’s why I’m not afraid about the space!’ Overwhelming happiness flooded over her, and she ran back to the train before it left the station.
+// 7
+[Null]
+// 8
+[Null]
+// 9
+[Null]
+// 10
+[Null]
+// 11
+[Null]
+// 12
+[Notif]Nella realised that she was walking in the space. The Hubble space globe was in front of her. It didn’t take long for her to recall what she needed to do. The Hubble space globe was broken, and she needed to repair it. She took out some tools from a small bag, and started repairing. The space globe was like the eyes of human civilization. We can only glimpse into the far universe through it. Suddenly, Nella realised that there was a piece of space junk approaching the Hubble space globe. The debris was travelling very fast, and unfortunately, Hubble was on its way. Hubble is not going to survive the clash, and the eyes of human civilization will be destroyed. We can never see the beautiful pictures of stars ever again. Without any hesitation, Nella jumped out and reached for the space junk. She rolled in the space, and the debris struck her in the back. Hubble was not in its path anymore, but the clash destroyed Nella’s oxygen supplying system. She felt that she was losing her thoughts, and when she woke up, she saw the face of Jonah. ‘You fell asleep.’ ‘I… dreamt about the last few minutes of my life.’ ‘Really? What did you do?’ ‘I… I protected the Hubble space globe.’ ‘You did something good for the entire human civilization.’ Jonah took off his hat and bowed at Nella.
+// 13
+[Null]
+// 14
+[Null]
+// 15
+[Null]
+// 16
+[Null]
+// 17
+[Null]
+// 18
+[Notif]The burning lights from the scorpion woke Nella up. Nella felt that somebody was sitting beside her. She looked at the person, and it’s the gentleman who offered to tell Nella a story. ‘You’re awake! Want to hear the story?’ Nella didn’t have other things to do. Why not? She thought. Nella nodded and sat straight, waiting for the gentleman to start the story. ‘The story is about a scorpion. A weasel chased after a scorpion in the desert. The scorpion didn’t want to be the weasel’s lunch, so it ran as fast as it can. However, it didn’t pay attention to the surrounding, and it fell into a deep well. As it was going to get drowned, he started to worship. ‘I ate so many creatures during my life. Today, I was afraid that the weasel would eat me, so I ran away in a hurry. There is nothing that can save me right now. Why didn’t I just let the weasel eat me? It must be hungry as well! The omnipotent god, please see through my heart! Don’t let me die in vain. Please use my body to bring happiness to others!’ Then, the scorpion found out that its body was burning. The flame lighted up the darkness. The fire is still burning till this day.’ ‘It’s a meaningful story.’ Nella said, ‘I like it.’ The gentleman nodded, ‘I want to be that scorpion. If you burn your own life with a never-ending flame, everyone will remember and appreciate you. Your pain and suffering contribute other people’s happiness.’ The gentleman sighed, ‘It’s too late. This is a hard decision to make, and I have never thought about that during my entire life. We are dead now, and we are talking about things only living beings can do. How sadistic is that?’ Nella sighed and continued to look into the burning light coming out from the scorpion.
+// 19
+[Null]
+// 20
+[Null]
+// 21
+[Null]
+// 22
+[Null]
+// 23
+[Null]
+// 24
+[Notif]It was the southern cross again. Just like last time, Nella sat still on the seat and looked out of the window while others prayed and left the train. Suddenly, a person put a hand on Nella’s shoulder. Nella turned around. It was an old lady. Her hair was all silver, like the lining of a thermometer. Her eyes were milky, and Nella found it hard to look into those eyes. ‘Why are you not worshiping, young woman?’ ‘I have my own god.’ The old lady smiled, ‘What kind of god is your god?’ ‘It’s just the god I believe in.’ ‘Do you worship to him?’ ‘No…’ ‘If you don’t have faith in him, it’s not your true god. Gods exist because you believe they exist.’ ‘Well… I’ve worshipped to him once…’ The next second, Nella froze. A blonde girl with two blue eyes shining like a crystal ran out of the church-like station. She was wearing a white wedding dress, and she opened her arms. ‘I worshipped to him that day, asking for his blessings. I believed him, and he made us the happiest couple that day. My wife...’ The girl ran closer and closer to the train. ‘Her name is Sophia.’ Tears slid across Nella’s cheek silently. ‘…and I’ll never see her again.’ The blonde girl disappeared.
