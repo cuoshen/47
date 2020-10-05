@@ -102,6 +102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 381639967567844566}
   - component: {fileID: 381639967567844569}
+  - component: {fileID: 3834704833517337423}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -139,8 +140,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58d023238a4b9b5449d117490227ff5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  source: {fileID: 0}
   speed: 5
   displacementError: 0.1
+--- !u!65 &3834704833517337423
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381639967567844567}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 1.44, z: 0}
 --- !u!1 &1088312400191242429
 GameObject:
   m_ObjectHideFlags: 0

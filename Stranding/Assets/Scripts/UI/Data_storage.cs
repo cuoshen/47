@@ -64,9 +64,11 @@ namespace Stranding
 
         // control set _trigger_dice_roll to true
         // -> dice set _trigger_dice_roll to false and roll
-        // -> after roll compelte dice set _is_dice_roll_complete to true, set _last_dice_outcome
-        // -> control read _last_dice_outcome when _is_dice_roll_complete is true
-        // -> after read control set _is_dice_roll_complete to false
+        // -> after roll compelte dice set _last_dice_outcome
+        // -> after _last_dice_outcome changed
+        // -> control read _last_dice_outcome when Is_dice_updated is true
+        // -> after read control set Is_dice_updated to false
+
         private bool _trigger_dice_roll;
         public bool Trigger_dice_roll
         {
@@ -74,11 +76,11 @@ namespace Stranding
             get { return _trigger_dice_roll; }
         }
 
-        private bool _is_dice_roll_complete;
-        public bool Is_dice_roll_complete
+        private bool _is_dice_updated;
+        public bool Is_dice_updated
         {
-            set { _is_dice_roll_complete = value; }
-            get { return _is_dice_roll_complete; }
+            set { _is_dice_updated = value; }
+            get { return _is_dice_updated; }
         }
 
         private int _last_dice_outcome;
@@ -88,12 +90,22 @@ namespace Stranding
             get { return _last_dice_outcome; }
         }
 
+        private bool _is_at_station;
+        public bool Is_at_station
+        {
+            set { _is_at_station = value; }
+            get { return _is_at_station; }
+        }
+
         public void Start()
         {
             Health = 100;
             Loop = 0;
             Step = 0;
             Last_dice_outcome = 0;
+            Trigger_dice_roll = false;
+            Is_dice_updated = false;
+            Is_at_station = false;
         }
     }
 }
