@@ -9,6 +9,6 @@ namespace Stranding
     static class Capacity
     {
         public const int OPTIONS = 2;
-        public const int BLOCKS = 16;
+        public const int BLOCKS = 24;
     }
 }
