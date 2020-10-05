@@ -52,7 +52,7 @@ namespace Stranding
         private string message;
         private bool isSendingText = false;
         private int currentTextCounter = 0;
-        private float textSendingSpeed = 14f;
+        private float textSendingSpeed = 20f;
         private float currentTextPosition = 0;
 
         private void Start()
