@@ -67,7 +67,7 @@ namespace Stranding
                 }
             }
 
-            if (Input.GetKey(KeyCode.Space) && ReadyForNextTurn)
+            if (Input.GetKeyDown(KeyCode.Space) && ReadyForNextTurn)
             {
                 TakeNextTurn();
                 UpdataStorage();
