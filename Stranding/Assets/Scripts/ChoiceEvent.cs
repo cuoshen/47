@@ -36,8 +36,8 @@ namespace Stranding
                     _choice = value;
                     if (outcomes[_choice].eventOutcome.message == "End")
                     {
-                        // Update to ending credits
-                        Time.timeScale = 0;
+                        GameLogic logic = GameObject.FindObjectOfType<GameLogic>().GetComponent<GameLogic>();
+                        logic.EndGame();
                     }
                     outcomes[_choice].eventOutcome.Execute(player);
                 }

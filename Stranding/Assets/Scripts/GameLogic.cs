@@ -19,6 +19,8 @@ namespace Stranding
         private Player player;
         [SerializeField]
         private Data_storage storage;
+        [SerializeField]
+        private GameObject endingScreen;
 
         private bool Trigger_dice_roll;
         private bool Is_dice_roll_complete;
@@ -41,6 +43,7 @@ namespace Stranding
 
         private void Start()
         {
+            endingScreen.SetActive(false);
             // Parse out the blocks in the circle
             Block[] blocksUnderDirectory = circleMasterDirectory.GetComponentsInChildren<Block>();
             foreach (Block b in blocksUnderDirectory)
@@ -143,6 +146,12 @@ namespace Stranding
             }
 
             Turn++;
+        }
+
+        public void EndGame()
+        {
+            endingScreen.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 }
