@@ -6,8 +6,14 @@ namespace Stranding
 {
     class Player : MonoBehaviour
     {
-        public int MaxSpeed { get; set; } = 1;
-        public int MapPosition { get; set; } = -1; // Start at -1 so that we land on the correct block
+        // player data storage game object
+        public GameObject source;
+        // local data storage script object
+        private Data_storage data_storage;
+
+
+        public int MaxSpeed { get; set; } = 6;
+        public int MapPosition { get; set; } = 0; // Start at -1 so that we land on the correct block
         private int _health;
         public int Health
         {
@@ -33,8 +39,8 @@ namespace Stranding
         [SerializeField]
         private float displacementError = 0.1f;
 
-        private Vector3 _destination = Vector3.zero;
-        public Vector3 Destination
+        private Queue<Vector3> _destination;
+        public Queue<Vector3> Destination
         {
             get
             {
@@ -47,18 +53,44 @@ namespace Stranding
             }
         }
         public bool isAtDestination { get; private set; } = true;
+        private Vector3 current_destination;
+
+        private void Start()
+        {
+            // initialize data storage
+            data_storage = source.GetComponent<Data_storage>();
+
+            _destination = new Queue<Vector3>();
+            current_destination = transform.position;
+        }
 
         private void Update()
         {
+            if (data_storage.Is_at_station)
+            {
+                // clear all further steps if arrive at a station
+                while(Destination.Count > 0)
+                {
+                    Destination.Dequeue();
+                }
+            }
+
+
+            if (Destination.Count > 0 && isAtDestination)
+            {
+                current_destination = Destination.Dequeue();
+            }
+
             // Move towards the destination
-            if (Vector3.Distance(transform.position, Destination) <= displacementError)
+            if (Vector3.Distance(transform.position, current_destination) <= displacementError)
             {
                 isAtDestination = true;
             }
             else
             {
-                transform.position = Vector3.MoveTowards(transform.position, Destination, speed * Time.deltaTime);
-                transform.rotation = Quaternion.LookRotation(Destination - transform.position, Vector3.up);
+                transform.position = Vector3.MoveTowards(transform.position, current_destination, speed * Time.deltaTime);
+                transform.rotation = Quaternion.LookRotation(current_destination - transform.position, Vector3.up);
+                isAtDestination = false;
             }
         }
 

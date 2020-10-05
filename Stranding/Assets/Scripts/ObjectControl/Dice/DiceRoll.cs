@@ -33,6 +33,8 @@ namespace Stranding
             get { return last_roll_outcome; }
         }
 
+        private bool is_dice_rolling;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -44,6 +46,7 @@ namespace Stranding
             rigidbody = GetComponent<Rigidbody>();
             init_position = transform.position;
             _last_roll_outcome = 0;
+            is_dice_rolling = false;
             roll();
         }
 
@@ -51,18 +54,30 @@ namespace Stranding
         void Update()
         {
             _is_roll_finished = rigidbody.velocity.magnitude < 0.01f;
+
+            // if recieved trigger flag
+            if (data_storage.Trigger_dice_roll)
+            {
+                data_storage.Trigger_dice_roll = false;
+                is_dice_rolling = true;
+                roll();
+            }
+
             // if dice stops
             if (_is_roll_finished)
             {
                 GetDiceCount();
                 // push dice roll outcome to data storage
                 data_storage.Last_dice_outcome = _last_roll_outcome;
+
+                if (is_dice_rolling)
+                {
+                    is_dice_rolling = false;
+                    data_storage.Is_dice_updated = true;
+                }
+
             }
 
-            if (Input.GetKey(KeyCode.R))
-            {
-                roll();
-            }
         }
 
         private void roll()

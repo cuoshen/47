@@ -20,6 +20,10 @@ namespace Stranding
         [SerializeField]
         private Data_storage storage;
 
+        private bool Trigger_dice_roll;
+        private bool Is_dice_roll_complete;
+        private int Last_dice_outcome;
+
         public int Turn { get; private set; } = 0;
         public int TotalStep { get; private set; } = 0;
         public int Loop { get; private set; } = 0;
@@ -69,27 +73,71 @@ namespace Stranding
 
             if (Input.GetKeyDown(KeyCode.Space) && ReadyForNextTurn)
             {
-                TakeNextTurn();
-                UpdataStorage();
+                if (!storage.Is_dice_updated && !Trigger_dice_roll)
+                {
+                    // trigger roll dice
+                    storage.Trigger_dice_roll = true;
+
+                    // remove arrive at station limit
+                    storage.Is_at_station = false;
+                }
             }
+
+            if (storage.Is_dice_updated && !Trigger_dice_roll)
+            {
+                TakeNextTurn(storage.Last_dice_outcome);
+                UpdataStorage();
+                storage.Is_dice_updated = false;
+            }
+
         }
 
-        private void TakeNextTurn()
+        private void TakeNextTurn(int movement)
         {
             ReadyForNextTurn = false;
             hasCooledDown = false;
 
-            int movement = Random.Range(0, player.MaxSpeed) + 1; // TODO: maybe implement a visual dice roll
+            // replaced with pass in parameter
+            //int movement = Random.Range(0, player.MaxSpeed) + 1; // TODO: maybe implement a visual dice roll
+
+
             TotalStep += movement;
             int newMapPosition = player.MapPosition + movement;
-            while (newMapPosition >= circle.Count)
+
+            // trying to let train stop at station
+            //if (newMapPosition / 6 != player.MapPosition / 6)
+            //{
+            //    movement -= (newMapPosition - newMapPosition / 6 * 6);
+            //    newMapPosition = newMapPosition / 6 * 6;
+                
+            //}
+
+            //Debug.Log(movement + "|" + newMapPosition + "|" + circle.Count);
+
+            if (newMapPosition > circle.Count)
             {
                 Loop++;
-                newMapPosition -= circle.Count;
+                newMapPosition = newMapPosition % circle.Count - 1;
             }
-            player.MapPosition = newMapPosition;
+            
 
-            player.Destination = circle[newMapPosition].transform.position + Vector3.up; 
+            while (movement > 0)
+            {
+                player.MapPosition += 1;
+                
+                // restart from 0 after finishing a loop
+                if (player.MapPosition >= circle.Count)
+                {
+                    player.MapPosition = 0;
+                }
+
+                player.Destination.Enqueue(circle[player.MapPosition].transform.position);
+                
+
+                movement -= 1;
+            }
+            
+
 
             // Execute event on the block
             if (circle[newMapPosition].Events.Count > 0)
@@ -100,6 +148,7 @@ namespace Stranding
                     currentEvent.Execute(player);
                 }
             }
+
 
             Turn++;
         }
