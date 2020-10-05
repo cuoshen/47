@@ -59,7 +59,7 @@ namespace Stranding
                 data_storage.Last_dice_outcome = _last_roll_outcome;
             }
 
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKey(KeyCode.R))
             {
                 roll();
             }
