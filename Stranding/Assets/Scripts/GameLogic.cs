@@ -97,29 +97,26 @@ namespace Stranding
             ReadyForNextTurn = false;
             hasCooledDown = false;
 
-            // replaced with pass in parameter
-            //int movement = Random.Range(0, player.MaxSpeed) + 1; // TODO: maybe implement a visual dice roll
-
-
             TotalStep += movement;
             int newMapPosition = player.MapPosition + movement;
 
-            // trying to let train stop at station
-            //if (newMapPosition / 6 != player.MapPosition / 6)
-            //{
-            //    movement -= (newMapPosition - newMapPosition / 6 * 6);
-            //    newMapPosition = newMapPosition / 6 * 6;
-                
-            //}
-
-            //Debug.Log(movement + "|" + newMapPosition + "|" + circle.Count);
+            // Have the train stop at station
+            // See if we have a station
+            for (int i = 1; i <= 4; i++)
+            {
+                int stationIndex = 6 * i - 1;
+                if (stationIndex > player.MapPosition && stationIndex <= newMapPosition)
+                {
+                    newMapPosition = stationIndex;
+                    movement = newMapPosition - player.MapPosition;
+                }
+            }
 
             if (newMapPosition > circle.Count)
             {
                 Loop++;
                 newMapPosition = newMapPosition % circle.Count - 1;
             }
-            
 
             while (movement > 0)
             {
@@ -132,12 +129,8 @@ namespace Stranding
                 }
 
                 player.Destination.Enqueue(circle[player.MapPosition].transform.position);
-                
-
                 movement -= 1;
             }
-            
-
 
             // Execute event on the block
             if (circle[newMapPosition].Events.Count > 0)
@@ -148,7 +141,6 @@ namespace Stranding
                     currentEvent.Execute(player);
                 }
             }
-
 
             Turn++;
         }

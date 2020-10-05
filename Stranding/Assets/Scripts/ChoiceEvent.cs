@@ -34,6 +34,11 @@ namespace Stranding
                 if (value >= 0 && value < optionsCount)
                 {
                     _choice = value;
+                    if (outcomes[_choice].eventOutcome.message == "End")
+                    {
+                        // Update to ending credits
+                        Time.timeScale = 0;
+                    }
                     outcomes[_choice].eventOutcome.Execute(player);
                 }
                 isComplete = true;
