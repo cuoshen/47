@@ -19,6 +19,14 @@ namespace Stranding
         private Text textBox;
         [SerializeField]
         private ScreenFade fade;
+        [SerializeField]
+        private Sprite nellaCalm;
+        [SerializeField]
+        private Sprite nellaSurprised;
+        [SerializeField]
+        private Sprite nellaHappy;
+        [SerializeField]
+        private SpriteRenderer characterArt;
 
         public Queue<string> Lines;
         private bool isAtTitleScreen;
@@ -46,7 +54,36 @@ namespace Stranding
             {
                 if (Lines.Count > 0)
                 {
-                    textBox.text = Lines.Dequeue();
+                    string line = Lines.Dequeue();
+                    string output = line;
+                    // Update character art accordingly
+                    if (line.Contains("]"))
+                    {
+                        output = output.Substring(output.IndexOf(']') + 1);
+                        string tag = line.Substring(1, line.IndexOf(']') - 1);
+                        switch (tag)
+                        {
+                            case "Nella, Surprised":
+                                characterArt.sprite = nellaSurprised;
+                                break;
+                            case "Nella, Happy":
+                                characterArt.sprite = nellaHappy;
+                                break;
+                            case "Nella, Calm":
+                                characterArt.sprite = nellaCalm;
+                                break;
+                            default:
+                                characterArt.sprite = null;
+                                output = line;
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        characterArt.sprite = null;
+                    }
+
+                    textBox.text = output;
                 }
                 else
                 {
